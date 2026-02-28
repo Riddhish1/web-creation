@@ -65,13 +65,10 @@ export function Portfolio() {
                 ))}
 
                 {/* See More Row */}
-                <div className="flex flex-col md:flex-row md:items-center w-full min-h-[140px] py-6 px-8 lg:px-[40px]">
-                    <div className="w-full md:w-[320px] shrink-0 mb-4 md:mb-0"></div>
-                    <div className="flex-1 text-left">
-                        <button className="bg-[var(--color-tribe-blue)] text-white text-[11px] font-semibold tracking-[0.18em] px-[32px] py-[16px] flex items-center justify-center gap-[6px] hover:opacity-90 transition-opacity">
-                            SEE MORE <ArrowUpRight className="w-[14px] h-[14px] ml-1 stroke-[2.5]" />
-                        </button>
-                    </div>
+                <div className="flex w-full items-center justify-center min-h-[140px] py-6 px-8 lg:px-[40px]">
+                    <button className="bg-[var(--color-tribe-blue)] text-white text-[11px] font-semibold tracking-[0.18em] px-[32px] py-[16px] flex items-center justify-center gap-[6px] hover:opacity-90 transition-opacity">
+                        SEE MORE <ArrowUpRight className="w-[14px] h-[14px] ml-1 stroke-[2.5]" />
+                    </button>
                 </div>
             </div>
         </section>

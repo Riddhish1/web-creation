@@ -114,11 +114,4 @@
   .dark .border-grid {
     border-color: var(--color-grid-line-dark);
   }
-
-  .grid-bg {
-    background-size: 100px 100px;
-    background-image:
-      linear-gradient(to right, var(--color-grid-line) 1px, transparent 1px),
-      linear-gradient(to bottom, var(--color-grid-line) 1px, transparent 1px);
-  }
 }

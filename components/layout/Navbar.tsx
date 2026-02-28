@@ -16,7 +16,7 @@ export function Navbar() {
 
     return (
         <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-            <div className="w-full flex h-[72px] items-stretch grid-bg border-b border-grid">
+            <div className="w-full flex h-[72px] items-stretch border-b border-grid">
 
                 {/* Logo Section */}
                 <div className="flex items-center justify-center px-10 border-r border-grid shrink-0 w-[300px]">
