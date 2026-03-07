@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { AreasOfFocus } from "@/components/sections/AreasOfFocus";
 import { Insights } from "@/components/sections/Insights";
+import { AboutUs } from "@/components/sections/AboutUs";
 import { Portfolio } from "@/components/sections/Portfolio";
 import { ArrowUpRight } from "lucide-react";
 
@@ -19,7 +20,7 @@ export default function Home() {
           <section className="min-h-[60vh] flex flex-col pt-[100px] lg:pt-[180px] pb-32 px-6 lg:px-20 xl:px-28 relative">
             <div className="max-w-[750px] z-10 bg-[#fafafa]/40 p-2 md:p-0 backdrop-blur-[2px] md:backdrop-blur-none">
               <h1 className="text-3xl md:text-[45px] font-light leading-[1.15] tracking-tight text-[var(--color-tribe-darkest)]">
-                We are a $2.2B AUM venture capital firm focused on harnessing AI and data science to deploy capital with precision — into N-of-1 companies.
+                Investing in the Businesses and Industries Defining the Next Decade
               </h1>
             </div>
 
@@ -43,6 +44,7 @@ export default function Home() {
           </section>
 
           <Portfolio />
+          <AboutUs />
           <AreasOfFocus />
           <Insights />
         </main>

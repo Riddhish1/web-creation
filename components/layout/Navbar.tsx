@@ -6,12 +6,10 @@ import { ArrowUpRight } from "lucide-react";
 
 export function Navbar() {
     const links = [
-        { name: "VENTURE", href: "#" },
-        { name: "CRYPTO", href: "#" },
-        { name: "INCUBATIONS", href: "#" },
-        { name: "ESSAYS", href: "#" },
-        { name: "TEAM", href: "#" },
-        { name: "ABOUT", href: "#" },
+        { name: "HOME", href: "#" },
+        { name: "INSIGHTS", href: "#" },
+        { name: "VIDEOS", href: "#" },
+        { name: "COMPANIES", href: "#" },
     ];
 
     return (
@@ -20,8 +18,8 @@ export function Navbar() {
 
                 {/* Logo Section */}
                 <div className="flex items-center justify-center px-10 border-r border-grid shrink-0 w-[300px]">
-                    <Link href="/" className="font-[family-name:var(--font-serif)] font-bold text-[22px] tracking-normal">
-                        TRIBE CAPITAL
+                    <Link href="/" className="font-[family-name:var(--font-serif)] font-bold text-[22px] tracking-normal uppercase">
+                        Fawaz
                     </Link>
                 </div>
 

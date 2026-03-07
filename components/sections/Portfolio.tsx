@@ -16,18 +16,14 @@ export function Portfolio() {
             {/* Left Sidebar Content (Desktop) */}
             <div className="hidden lg:block w-[300px] shrink-0 border-r border-grid pt-[64px] px-10">
                 <p className="text-[20px] leading-[1.3] text-[#222] font-light tracking-[-0.01em]">
-                    Our data allows us to systematically<br />
-                    partner with the world's most<br />
-                    promising companies.
+                    Research-driven insights on long-term growth, structural change, and enduring businesses.
                 </p>
             </div>
 
             {/* Mobile Sidebar Content */}
             <div className="lg:hidden w-full p-8 border-b border-grid">
                 <p className="text-[20px] leading-[1.3] text-[#222] font-light tracking-[-0.01em]">
-                    Our data allows us to systematically<br />
-                    partner with the world's most<br />
-                    promising companies.
+                    Research-driven insights on long-term growth, structural change, and enduring businesses.
                 </p>
             </div>
 
