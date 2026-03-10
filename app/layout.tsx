@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Tribe Capital",
+  title: "Fawaz",
   description: "We are a venture capital firm focused on harnessing AI and data science.",
 };
 

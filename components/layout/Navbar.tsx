@@ -1,10 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { DigitalButton } from "@/components/ui/DigitalButton";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 
 export function Navbar() {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
     const links = [
         { name: "HOME", href: "/" },
         { name: "INSIGHTS", href: "/insights" },
@@ -14,17 +17,17 @@ export function Navbar() {
 
     return (
         <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-            <div className="w-full flex h-[72px] items-stretch border-b border-grid">
+            <div className="w-full flex h-[72px] items-stretch border-b border-grid justify-between lg:justify-start relative z-50 bg-white">
 
                 {/* Logo Section */}
-                <div className="flex items-center justify-center px-10 border-r border-grid shrink-0 w-[300px]">
+                <div className="flex items-center justify-center px-6 lg:px-10 lg:border-r border-grid shrink-0 w-auto lg:w-[300px]">
                     <Link href="/" className="font-[family-name:var(--font-serif)] font-bold text-[22px] tracking-normal uppercase">
                         Fawaz
                     </Link>
                 </div>
 
-                {/* Links Section */}
-                <nav className="flex-1 flex items-center justify-center gap-8 px-6">
+                {/* Links Section (Desktop) */}
+                <nav className="hidden lg:flex flex-1 items-center justify-center gap-8 px-6">
                     {links.map((link) => (
                         <Link
                             key={link.name}
@@ -36,13 +39,44 @@ export function Navbar() {
                     ))}
                 </nav>
 
-                {/* CTA Section */}
-                <div className="flex shrink-0">
+                {/* CTA Section (Desktop) */}
+                <div className="hidden lg:flex shrink-0 border-l border-grid">
                     <DigitalButton variant="primary" className="h-full rounded-none px-8 font-semibold">
                         LEARN MORE <ArrowUpRight className="w-4 h-4 ml-1" />
                     </DigitalButton>
                 </div>
+
+                {/* Mobile Menu Toggle */}
+                <div
+                    className="flex items-center justify-center lg:hidden px-6 border-l border-grid cursor-pointer hover:bg-gray-50 transition-colors"
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                >
+                    {isMobileMenuOpen ? <X className="w-6 h-6 text-black" /> : <Menu className="w-6 h-6 text-black" />}
+                </div>
             </div>
+
+            {/* Mobile Menu Overlay */}
+            {isMobileMenuOpen && (
+                <div className="lg:hidden fixed inset-0 top-[72px] bg-white z-40 flex flex-col border-b border-grid h-[calc(100vh-72px)] overflow-y-auto">
+                    <nav className="flex flex-col w-full">
+                        {links.map((link) => (
+                            <Link
+                                key={link.name}
+                                href={link.href}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="w-full py-6 px-8 border-b border-grid text-[14px] font-bold tracking-[2px] text-black uppercase hover:bg-gray-50 transition-colors"
+                            >
+                                {link.name}
+                            </Link>
+                        ))}
+                    </nav>
+                    <div className="p-8 mt-auto border-t border-grid bg-gray-50">
+                        <DigitalButton variant="primary" className="w-full py-4 flex justify-center font-semibold rounded-none">
+                            LEARN MORE <ArrowUpRight className="w-4 h-4 ml-2" />
+                        </DigitalButton>
+                    </div>
+                </div>
+            )}
         </header>
     );
 }
