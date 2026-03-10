@@ -27,22 +27,6 @@ export default function Home() {
 
           </section>
 
-          {/* DOT MATRIX GRAPHIC SECTION (Replacing ASCII) */}
-          <section className="w-full bg-[var(--color-tribe-light)] relative overflow-hidden h-[600px] border-t border-b border-grid flex items-center justify-center">
-            {/* Decorative absolute blocks to simulate the tiered background shown in the design */}
-            <div className="absolute top-0 right-0 w-[40%] h-[50%] bg-white border-b border-l border-grid mix-blend-overlay" />
-
-            <div className="relative z-10 w-full flex justify-center text-center">
-              {/* Simulating the blue dotted hand graphic with a styled container representing the dot matrix */}
-              <div className="w-[80vw] max-w-[900px] h-[500px] relative opacity-90" style={{
-                backgroundSize: '16px 16px',
-                backgroundImage: 'radial-gradient(circle at center, var(--color-tribe-blue) 1.5px, transparent 2px)',
-                maskImage: 'linear-gradient(to top, black 10%, transparent 95%), radial-gradient(ellipse at 60% 50%, black 30%, transparent 70%)',
-                WebkitMaskImage: 'linear-gradient(to top, black 10%, transparent 95%), radial-gradient(ellipse at 60% 50%, black 30%, transparent 70%)',
-              }} />
-            </div>
-          </section>
-
           <Portfolio />
           <AboutUs />
           <AreasOfFocus />

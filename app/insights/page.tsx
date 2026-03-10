@@ -1,33 +1,8 @@
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { ArrowUpRight } from "lucide-react";
-
-const essays = [
-    {
-        id: 1,
-        tag: "COMPANY BUILDING",
-        readTime: "9 min read",
-        title: "Venture capital restarts: Navigating the funding desert to unlock extreme value",
-        excerpt: "In the current venture capital landscape, a phenomenon known as the \"funding desert\" is reshaping how investors and startups interact.",
-        imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1200&auto=format&fit=crop",
-    },
-    {
-        id: 2,
-        tag: "DATA SCIENCE",
-        readTime: "6 min read",
-        title: "How AI-native companies are rewriting the rules of compounding growth",
-        excerpt: "The metrics that once defined success in SaaS no longer adequately capture the dynamics at play in AI-first businesses.",
-        imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
-    },
-    {
-        id: 3,
-        tag: "MARKETS",
-        readTime: "12 min read",
-        title: "Public market signals every private investor should be watching in 2026",
-        excerpt: "Cross-market intelligence is becoming a key differentiator. Here is our framework for reading the signals that matter most.",
-        imageUrl: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1200&auto=format&fit=crop",
-    },
-];
+import { articles } from "./data";
 
 const insightItems = [
     {
@@ -37,6 +12,7 @@ const insightItems = [
         featuring: "Featuring Fawaz's Philippe Laffont",
         linkText: "Visit ml.com",
         imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop",
+        slug: "venture-capital-restarts",
     },
     {
         id: 2,
@@ -45,6 +21,7 @@ const insightItems = [
         featuring: "Featuring Fawaz's Michael Barton Jr.",
         linkText: "Learn more",
         imageUrl: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800&auto=format&fit=crop",
+        slug: "ai-native-companies-compounding-growth",
     },
     {
         id: 3,
@@ -53,6 +30,7 @@ const insightItems = [
         featuring: "Brendan O'Boyle, Rohan Bharvani, Lucas Swisher",
         linkText: "Learn more",
         imageUrl: "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=800&auto=format&fit=crop",
+        slug: "public-market-signals-2026",
     },
 ];
 
@@ -121,10 +99,10 @@ export default function InsightsPage() {
 
                     {/* Essay List */}
                     <div className="flex flex-col divide-y divide-gray-200">
-                        {essays.map((essay) => (
-                            <a
-                                key={essay.id}
-                                href="#"
+                        {articles.map((essay) => (
+                            <Link
+                                key={essay.slug}
+                                href={`/insights/${essay.slug}`}
                                 className="group flex flex-col sm:flex-row gap-6 lg:gap-10 py-10 hover:bg-gray-50 transition-colors -mx-4 px-4 rounded-sm"
                             >
                                 {/* Image */}
@@ -163,7 +141,7 @@ export default function InsightsPage() {
                                         </span>
                                     </div>
                                 </div>
-                            </a>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -181,9 +159,9 @@ export default function InsightsPage() {
                     {/* Insight Rows */}
                     <div className="flex flex-col divide-y divide-gray-200">
                         {insightItems.map((item) => (
-                            <a
+                            <Link
                                 key={item.id}
-                                href="#"
+                                href={`/insights/${item.slug}`}
                                 className="group flex flex-col sm:flex-row gap-6 lg:gap-12 py-8"
                             >
                                 {/* Left: Image */}
@@ -206,7 +184,7 @@ export default function InsightsPage() {
                                             {item.title}
                                         </h3>
 
-                                        {/* Bullet info (author / featuring) */}
+                                        {/* Bullet info */}
                                         <p className="flex items-start gap-2 text-[13px] text-[#555] leading-[1.5]">
                                             <span className="mt-[6px] w-[5px] h-[5px] rounded-full bg-[#555] shrink-0 inline-block" />
                                             {item.featuring}
@@ -221,7 +199,7 @@ export default function InsightsPage() {
                                         {item.linkText}
                                     </div>
                                 </div>
-                            </a>
+                            </Link>
                         ))}
                     </div>
                 </div>

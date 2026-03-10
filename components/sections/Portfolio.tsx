@@ -39,21 +39,21 @@ export function Portfolio() {
                     >
                         {/* Company Name Box */}
                         <div className="w-full md:w-[320px] shrink-0 mb-4 md:mb-0">
-                            <div className="border border-[var(--color-tribe-blue)] text-[var(--color-tribe-blue)] group-hover:border-[#ffffff] group-hover:text-[#ffffff] text-[9.5px] font-medium tracking-[0.06em] px-3 py-[6px] inline-block uppercase">
+                            <div className="border border-[var(--color-tribe-blue)] text-[var(--color-tribe-blue)] group-hover:border-[#ffffff] group-hover:text-[#ffffff] text-[12px] font-semibold tracking-[0.06em] px-3 py-[7px] inline-block uppercase">
                                 // {company.name}
                             </div>
                         </div>
 
                         {/* Country */}
                         <div className="w-full md:w-[180px] shrink-0 mb-3 md:mb-0 text-left">
-                            <span className="text-[var(--color-tribe-blue)] group-hover:text-[#ffffff] text-[10.5px] font-semibold tracking-[0.18em]">
+                            <span className="text-[var(--color-tribe-blue)] group-hover:text-[#ffffff] text-[13px] font-semibold tracking-[0.18em]">
                                 {company.country}
                             </span>
                         </div>
 
                         {/* Description */}
                         <div className="flex-1 text-left">
-                            <p className="text-[14px] text-black/50 group-hover:text-[#ffffff] group-hover:!text-[#ffffff] font-light leading-[1.6] max-w-[340px] whitespace-pre-line">
+                            <p className="text-[15px] text-black/60 group-hover:text-[#ffffff] group-hover:!text-[#ffffff] font-light leading-[1.6] max-w-[340px] whitespace-pre-line">
                                 {company.desc}
                             </p>
                         </div>

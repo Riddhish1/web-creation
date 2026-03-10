@@ -62,7 +62,7 @@ export function Footer() {
                             Legal Notices & Terms of Use
                         </Link>
 
-                        <div>Designed with <span className="text-[16px] leading-none align-middle mx-1">❋</span> zypsy</div>
+                        <div>Designed with <span className="text-[16px] leading-none align-middle mx-1">❋</span> riddhish</div>
 
                         <div className="flex items-center gap-5 text-white text-[16px]">
                             <a href="#" className="hover:opacity-70 font-semibold tracking-wide flex items-center justify-center w-[20px] h-[20px]">
